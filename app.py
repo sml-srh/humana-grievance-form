@@ -44,7 +44,7 @@ st.title("Humana Grievance Form")
 uploaded_file = st.file_uploader("Upload your Excel file", type="xlsx")
 if uploaded_file is not None:
     df = pd.read_excel(uploaded_file)
-    df = df.iloc[:, 5:]  # Ignore the first 5 columns
+    df = df.iloc[:, 6:]  # Ignore the first 6 columns
 
     # Generate PDFs
     pdf_files = generate_pdfs(df)
